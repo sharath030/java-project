@@ -8,7 +8,7 @@ pipeline    {
                     }
                   }
                         stage('DEPLOY'){
-                                    agent { label label1 }
+                                    agent { label test1 }
                                     steps {
                                                 sh 'scp -r /var/lib/jenkins/workspace/newpipleline/target/hello-world-war-1.0.0.war ec2-user@172.31.25.229:/home/ec2-user/apache-tomcat-9.0.58/webapps'
                                                 echo 'Deploy success'
